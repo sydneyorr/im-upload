@@ -34,10 +34,4 @@ two ways do this
 - `git commit -m 'init'`
 - `git remote add origin sshlink`
 
-# DONE
 
-// get skills.. Better in this case if it is skills users doesn't have, but that is not a req of hmt
-
-// add to db... Grade Create
-
-// update UI (REACT)
