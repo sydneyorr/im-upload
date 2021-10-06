@@ -22,4 +22,24 @@ class Api::MemesController < ApplicationController
       end
     end
   end
+
+  def create1
+    file = params["items"]
+    if file
+      begin
+        cloud_image = Cloudinary::Uploader.upload(file, public_id: file.original_filename, secure: true, resource_type: :auto)
+        meme = Meme.new(image: cloud_image["secure_url"], text: "some hardcoded text")
+        if meme.save
+          # did save to cloudianry and db
+          render json: meme
+        else
+          # did save to cloudianry but not to db
+          render json: { errors: meme.errors }, status: 422
+        end
+      rescue => err
+        # did not save to cloudinary
+        render json: { errors: err }, status: 422
+      end
+    end
+  end
 end

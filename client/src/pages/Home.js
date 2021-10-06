@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Image } from "semantic-ui-react";
+import { Divider, Image } from "semantic-ui-react";
 
 // Import React FilePond
 import { FilePond, registerPlugin } from "react-filepond";
@@ -14,6 +14,7 @@ import "filepond/dist/filepond.min.css";
 import FilePondPluginImageExifOrientation from "filepond-plugin-image-exif-orientation";
 import FilePondPluginImagePreview from "filepond-plugin-image-preview";
 import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";
+import JustImageUpload from "../components/JustImageUpload";
 
 // Register the plugins
 registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview);
@@ -71,6 +72,8 @@ export default function Home() {
       </form>
 
       <Image src={url} size="large" wrapped />
+      <Divider />
+      <JustImageUpload />
     </div>
   );
 }
