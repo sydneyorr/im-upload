@@ -11,3 +11,7 @@ Thing.create(name: Faker::Company.name)
 Thing.create(name: Faker::Company.name)
 
 User.create(email: "test@test.com", password: "123456")
+
+Cat.create(name: Faker::Creature::Cat.name)
+Cat.create(name: Faker::Creature::Cat.name)
+Cat.create(name: Faker::Creature::Cat.name)

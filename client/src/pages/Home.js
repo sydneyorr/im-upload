@@ -15,6 +15,7 @@ import FilePondPluginImageExifOrientation from "filepond-plugin-image-exif-orien
 import FilePondPluginImagePreview from "filepond-plugin-image-preview";
 import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";
 import JustImageUpload from "../components/JustImageUpload";
+import Cat from "../components/Cat";
 
 // Register the plugins
 registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview);
@@ -74,6 +75,7 @@ export default function Home() {
       <Image src={url} size="large" wrapped />
       <Divider />
       <JustImageUpload />
+      <Cat />
     </div>
   );
 }

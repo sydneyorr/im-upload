@@ -68,7 +68,6 @@ function JustImageUpload() {
       )
       <Image src={url} size="large" wrapped />
     </>
-  );
-}
+  )}
 
 export default JustImageUpload;
