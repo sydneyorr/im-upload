@@ -22,7 +22,9 @@ const Cat = () => {
     })
   }
   return (
-    <div>
+   
+    <div key={cats.id}>
+       <h1>CATS</h1>
       {renderCats()}
     </div>
   );
